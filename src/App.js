@@ -1,8 +1,8 @@
 import "./App.css";
 
-import SearchBar from "./components/SearchBar";
-import VideoList from "./components/VideoList";
-import VideoPlayer from "./components/VideoPlayer";
+import SearchBar from "./components/SearchBar/SearchBar";
+import VideoList from "./components/VideoList/VideoList";
+import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 
 function App() {
   return (
