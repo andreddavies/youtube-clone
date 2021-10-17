@@ -1,3 +1,6 @@
+import { Provider } from "react-redux";
+import store from "./store";
+import React from "react";
 import "./App.css";
 
 import SearchBar from "./components/SearchBar/SearchBar";
@@ -6,11 +9,13 @@ import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 
 function App() {
   return (
-    <div className="App">
-      <SearchBar />
-      <VideoList />
-      <VideoPlayer />
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <SearchBar />
+        <VideoList />
+        <VideoPlayer />
+      </div>
+    </Provider>
   );
 }
 
