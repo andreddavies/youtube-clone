@@ -1,13 +1,15 @@
 import './SearchBar.css';
 import React from 'react';
+import {connect} from 'react-redux';
+import { searchVideos } from '../../store/actions/searchActions';
 
 const SearchBar = props => {
 
     const searchAbout = e => {
         
         if(e.keyCode === 13) {
-            const about = e.target.value;
-            console.log(about);
+            const term = e.target.value;
+            props.searchVideo(term);
         }
     };
 
@@ -22,4 +24,10 @@ const SearchBar = props => {
     );
 };
 
-export default SearchBar;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        searchVideo: (term) => dispatch(searchVideos(term))
+    }
+};
+
+export default connect(null, mapDispatchToProps)(SearchBar);
