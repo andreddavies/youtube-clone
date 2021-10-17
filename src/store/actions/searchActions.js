@@ -26,7 +26,7 @@ export const errorSearch = () => {
   };
 };
 
-export const searchActions = (term) => {
+export const searchVideos = (term) => {
   return (dispatch) => {
     dispatch(isSearching());
     youtubeSearch(API_KEY, { q: term })
