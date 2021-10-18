@@ -7,16 +7,16 @@
 }
 
 .search-bar {
-  grid-area: search-bar;
   background: red;
+  grid-area: search-bar;
 }
 
 .video-player {
-  grid-area: video-player;
   background: blue;
+  grid-area: video-player;
 }
 
 .video-list {
+  background: #f0f0f0;
   grid-area: video-list;
-  background: yellow;
 }

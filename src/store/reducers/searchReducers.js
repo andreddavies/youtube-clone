@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   error: false,
 };
 
-const searchReducers = (state = INITIAL_STATE, action) => {
+const search = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "IS_SEARCHING":
       return {
@@ -32,4 +32,4 @@ const searchReducers = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default searchReducers;
+export default search;
