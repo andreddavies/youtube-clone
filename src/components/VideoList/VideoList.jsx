@@ -1,6 +1,7 @@
 import './VideoList.css';
-import React, { useState } from "react";
+import React from "react";
 import {connect} from 'react-redux'
+import videoPlayer from '../../store/actions/playerActions';
 
 const VideoList = props => {
     
@@ -41,6 +42,12 @@ const VideoList = props => {
     )
 };
 
+const mapDispatchToProps = dispatch => {
+    return {
+        play: video => dispatch(videoPlayer(video))
+    };
+};
+
 const mapStateToProps = (state) => {
     return {
         videos: state.search.videos,
@@ -49,4 +56,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps, null)(VideoList);
+export default connect(mapStateToProps, mapDispatchToProps)(VideoList);

@@ -5,6 +5,8 @@
 
 .list-item {
   display: flex;
+  padding: 10px;
+  margin: 10px 0;
   cursor: pointer;
   transition: 0.3s;
   max-height: 100px;
@@ -14,7 +16,6 @@
 
 .list-item:hover {
   margin-left: 8px;
-  border: 4px solid #999;
 }
 
 .list-item:active {
