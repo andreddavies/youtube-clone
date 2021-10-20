@@ -1,0 +1,20 @@
+footer.footer {
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  color: #ccc;
+  background: #222;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 2px solid #ccc;
+}
+
+.contact {
+  margin-bottom: 20px;
+}
+
+.contact a {
+  color: #ccc;
+  text-decoration: none;
+}

@@ -1,6 +1,6 @@
 import './SearchBar.css';
-import React from 'react';
 import {connect} from 'react-redux';
+import React, { useEffect } from 'react';
 import { searchVideos } from '../../store/actions/searchActions';
 
 const SearchBar = props => {
@@ -9,9 +9,13 @@ const SearchBar = props => {
         
         if(e.keyCode === 13) {
             const term = e.target.value;
-            props.searchVideo(term);
+            props.searchVideos(term);
         }
     };
+
+    useEffect(() => {
+        return props.searchVideos('Top videos');
+    }, [props]);
 
     return (
         <div className="search-bar">
@@ -26,7 +30,7 @@ const SearchBar = props => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        searchVideo: (term) => dispatch(searchVideos(term))
+        searchVideos: (term) => dispatch(searchVideos(term))
     }
 };
 

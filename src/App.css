@@ -1,22 +1,23 @@
 .App {
-  display: grid;
-  grid-template-areas:
-    "search-bar search-bar search-bar search-bar"
-    "video-player video-player video-player video-list"
-    "video-player video-player video-player video-list";
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.App main {
+  display: flex;
 }
 
 .search-bar {
-  grid-area: search-bar;
+  width: 100%;
   background: red;
 }
 
 .video-player {
-  grid-area: video-player;
-  background: blue;
+  width: 100%;
+  border-right: 1px solid #ccc;
 }
 
 .video-list {
-  grid-area: video-list;
-  background: yellow;
+  max-width: 40%;
+  background: #f0f0f0;
 }
